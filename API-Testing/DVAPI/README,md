@@ -1,0 +1,107 @@
+# DVAPI — Vulnerability Assessment
+
+**Severity:** Critical  
+**Category:** API Security / Web Application Security  
+**Target:** DVAPI (Damn Vulnerable API)  
+**Testing Tool:** Burp Suite Community / Professional
+
+## Overview
+
+A comprehensive vulnerability assessment was conducted against the **DVAPI (Damn Vulnerable API)** application to identify security weaknesses across authentication, authorization, input validation, session management, file handling, and API exposure.
+
+The assessment identified **10 vulnerabilities**, including **4 Critical, 4 High, 1 Medium, and 1 Low** severity findings. :contentReference[oaicite:0]{index=0}
+
+## Key Findings
+
+### Critical
+
+- **Broken Object Level Authorization (BOLA / IDOR)** — Unauthorized access to other users' private resources.
+- **NoSQL Injection** — Authentication bypass through malicious MongoDB query operators.
+- **JWT Algorithm Confusion / Weak Token Validation** — Improper JWT validation and verbose error disclosure.
+- **Broken Function Level Authorization (BFLA)** — Unauthorized deletion of user accounts by regular users. :contentReference[oaicite:1]{index=1} :contentReference[oaicite:2]{index=2} :contentReference[oaicite:3]{index=3} :contentReference[oaicite:4]{index=4}
+
+### High
+
+- **Mass Assignment / BOPLA** — Manipulation of protected object properties such as user scores.
+- **Server-Side Request Forgery (SSRF)** — Server-side requests to attacker-controlled URLs and potential internal resource access.
+- **Unrestricted File Upload / Missing File Size Validation** — Arbitrarily large files accepted by the application.
+- **Improper API Inventory Management** — Undocumented and insufficiently restricted API endpoints increasing the attack surface. :contentReference[oaicite:5]{index=5} :contentReference[oaicite:6]{index=6} :contentReference[oaicite:7]{index=7} :contentReference[oaicite:8]{index=8}
+
+### Medium
+
+- **Missing Rate Limiting** — Login endpoint vulnerable to automated brute-force attacks due to the absence of throttling and account protection mechanisms. :contentReference[oaicite:9]{index=9}
+
+### Low
+
+- **Long Session Lifetime / Token Re-Issue Without Invalidation** — Previously issued JWTs remain usable after subsequent authentication. :contentReference[oaicite:10]{index=10}
+
+## Attack Surface
+
+```text
+                    DVAPI
+                      │
+        ┌─────────────┴─────────────┐
+        │                           │
+   Authentication              Authorization
+        │                           │
+   ┌────┼────┐                ┌────┼────┐
+   │    │    │                │    │    │
+ NoSQL JWT  Rate            BOLA  BFLA  BOPLA
+ Injection     Limit
+        │                           │
+        └─────────────┬─────────────┘
+                      ↓
+              API-Level Exploitation
+                      │
+          ┌───────────┼───────────┐
+          ↓           ↓           ↓
+         SSRF    File Upload   API Exposure
+                      │
+                      ↓
+              Sensitive Data /
+              Account Impact
+````
+
+## Impact
+
+The identified vulnerabilities can result in:
+
+* Unauthorized access to other users' data
+* Authentication bypass
+* Account compromise
+* Unauthorized user deletion
+* Manipulation of protected application data
+* Internal network access through SSRF
+* Resource exhaustion through oversized uploads
+* Brute-force account compromise
+* Exposure of internal application information
+* Extended validity of compromised authentication tokens
+
+## Remediation
+
+* Implement server-side object-level and function-level authorization
+* Validate and sanitize all user-controlled input
+* Prevent NoSQL operator injection using strict schema validation
+* Enforce a single, explicitly configured JWT signing algorithm
+* Never expose stack traces or internal errors to clients
+* Apply strict allowlists for object properties
+* Validate and restrict server-side URL requests
+* Enforce server-side file size and upload restrictions
+* Maintain an accurate API inventory and remove unused endpoints
+* Implement rate limiting and account lockout controls
+* Use short-lived access tokens with appropriate token rotation and revocation
+
+## Findings Summary
+
+| #  | Finding                             | Severity |
+| -- | ----------------------------------- | -------- |
+| 1  | BOLA / IDOR                         | Critical |
+| 2  | NoSQL Injection                     | Critical |
+| 3  | JWT Algorithm Confusion             | Critical |
+| 4  | Broken Function Level Authorization | Critical |
+| 5  | Mass Assignment / BOPLA             | High     |
+| 6  | SSRF                                | High     |
+| 7  | Unrestricted File Upload            | High     |
+| 8  | Improper Inventory Management       | High     |
+| 9  | Missing Rate Limiting               | Medium   |
+| 10 | Long Session / Token Invalidation   | Low      |
