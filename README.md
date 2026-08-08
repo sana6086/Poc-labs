@@ -25,8 +25,8 @@ Penetration testing &amp; VAPT lab write-ups — web application, API, Android, 
 
 | Lab | Vulnerability Class | Severity |
 |---|---|---|
-| [BUGbazaar - Static APK Testing](./APK-Testing/Bugbazaar/) | Static Analysis | Medium |
-| [BUGbazaar — Dynamic APK Testing](./APK-Testing/Bugbazaar/) | Runtime Manipulation, SSL Pinning Bypass | Medium |
+| [BUGbazaar - Static APK Testing](./APK-Testing/Bugbazar/) | Static Analysis | Medium |
+| [BUGbazaar — Dynamic APK Testing](./APK-Testing/Bugbazar/) | Runtime Manipulation, SSL Pinning Bypass | Medium |
 
 ## Red Team & CTF
 
