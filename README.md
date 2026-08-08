@@ -1,10 +1,6 @@
 # Poc-labs
 Penetration testing &amp; VAPT lab write-ups — web application, API, Android, and red team security research. Structured reports with methodology, PoC, and remediation guidance.
 
-Write-ups from vulnerable-machine, web application, API, and Android
-security labs — VulnHub, TryHackMe, PortSwigger Web Security Academy,
-DVAPI/crAPI, and independent practice environments.
-
 > All targets represented here are intentionally vulnerable practice
 > machines or authorized lab platforms. No client, employer, or
 > third-party production systems are represented in this repository.
