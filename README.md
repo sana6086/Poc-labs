@@ -13,7 +13,7 @@ Penetration testing &amp; VAPT lab write-ups — web application, API, Android, 
 |---|---|---|
 | [Temple of Doom](./web/temple-of-doom/) | Insecure Deserialization → RCE | High |
 | [Mr. Robot](./web/Mr.%20Robot/) | CMS Misconfiguration → Privilege Escalation | High |
-| [SQLi Practice — Quiz 01](./web/SQLi-Database-Exfilteration) | SQL Injection | High |
+| [SQLi-Database-Exfilteration](./web/SQLi-Database-Exfilteration) | SQL Injection | High |
 
 ## API Security
 
@@ -25,8 +25,8 @@ Penetration testing &amp; VAPT lab write-ups — web application, API, Android, 
 
 | Lab | Vulnerability Class | Severity |
 |---|---|---|
-| [BUGbazaar - Static APK Testing](./android/apk-testing/) | Static Analysis | Medium |
-| [BUGbazaar — Dynamic APK Testing](./android/bugbazaar-dynamic-testing/) | Runtime Manipulation, SSL Pinning Bypass | Medium |
+| [BUGbazaar - Static APK Testing](./APK-Testing/BUGbazaar/) | Static Analysis | Medium |
+| [BUGbazaar — Dynamic APK Testing](./APK-Testing/BUGbazaar/) | Runtime Manipulation, SSL Pinning Bypass | Medium |
 
 ## Red Team & CTF
 
