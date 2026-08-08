@@ -1,2 +1,70 @@
 # Poc-labs
 Penetration testing &amp; VAPT lab write-ups — web application, API, Android, and red team security research. Structured reports with methodology, PoC, and remediation guidance.
+# poc-labs
+
+Write-ups from vulnerable-machine, web application, API, and Android
+security labs — VulnHub, TryHackMe, PortSwigger Web Security Academy,
+DVAPI/crAPI, and independent practice environments.
+
+> All targets represented here are intentionally vulnerable practice
+> machines or authorized lab platforms. No client, employer, or
+> third-party production systems are represented in this repository.
+
+---
+
+## Web Application
+
+| Lab | Vulnerability Class | Severity |
+|---|---|---|
+| [Temple of Doom](./web/temple-of-doom/) | Insecure Deserialization → RCE | High |
+| [Mr. Robot](./redteam/mr-robot/) | CMS Misconfiguration → Privilege Escalation | High |
+| [SQLi Practice — Quiz 01](./web/sqli-quiz-01/) | SQL Injection | High |
+
+## API Security
+
+| Lab | Vulnerability Class | Severity |
+|---|---|---|
+| [DVAPI](./api/dvapi/) | BOLA / BFLA / JWT Mismanagement | High |
+
+## Android Security
+
+| Lab | Vulnerability Class | Severity |
+|---|---|---|
+| [APK Testing](./android/apk-testing/) | Static & Dynamic Analysis, Root Detection Bypass | Medium |
+| [BUGbazaar — Dynamic APK Testing](./android/bugbazaar-dynamic-testing/) | Runtime Manipulation, SSL Pinning Bypass | Medium |
+
+## Red Team & CTF
+
+| Lab | Category | Result |
+|---|---|---|
+| [Mr. Robot](./redteam/mr-robot/) | Boot-to-Root | Root obtained |
+| [Kioptrix](./redteam/kioptrix/) | Boot-to-Root | Root obtained |
+| [Password Cracking](./redteam/password-cracking/) | Credential Attacks | — |
+| [Network Sniffing](./redteam/network-sniffing/) | Traffic Analysis | — |
+| [Social Engineering](./redteam/social-engineering/) | Human-Layer Attack Simulation | — |
+| [Footprinting & Information Gathering](./redteam/footprinting-recon/) | Reconnaissance | — |
+
+---
+
+## Methodology
+
+Every engagement in this repo follows the same process:
+
+**Reconnaissance → Enumeration → Attack Surface Mapping → Vulnerability
+Discovery → Manual Validation → Controlled Exploitation → Impact
+Assessment → Reporting & Remediation.**
+
+Each lab folder contains a `README.md` with the full write-up (severity,
+summary, steps to reproduce, proof of concept, remediation guidance)
+and the original report as a linked PDF where applicable.
+
+---
+
+## About
+
+Penetration Tester / VAPT Analyst — final-year BS Cybersecurity student
+with hands-on internship experience in banking infosec (VAPT, SOC, GRC)
+and independent bug-bounty research across web, API, and mobile
+platforms.
+
+**Contact:** [LinkedIn](https://linkedin.com/in/sanaabdul-rehman-6a61a8383) · [Portfolio](https://sana6086.github.io) · [Email](mailto:sanarehman6086@gmail.com)
