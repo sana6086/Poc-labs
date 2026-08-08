@@ -12,27 +12,26 @@ Penetration testing &amp; VAPT lab write-ups — web application, API, Android, 
 | Lab | Vulnerability Class | Severity |
 |---|---|---|
 | [Temple of Doom](./web/temple-of-doom/) | Insecure Deserialization → RCE | High |
-| [Mr. Robot](./redteam/mr-robot/) | CMS Misconfiguration → Privilege Escalation | High |
-| [SQLi Practice — Quiz 01](./web/sqli-quiz-01/) | SQL Injection | High |
+| [Mr. Robot](./web/Mr.Robot/) | CMS Misconfiguration → Privilege Escalation | High |
+| [SQLi Practice — Quiz 01](./web/SQLi-Database-Exfilteration) | SQL Injection | High |
 
 ## API Security
 
 | Lab | Vulnerability Class | Severity |
 |---|---|---|
-| [DVAPI](./api/dvapi/) | BOLA / BFLA / JWT Mismanagement | High |
+| [DVAPI](./API-Testing/DVAPI/) | BOLA / BFLA / JWT Mismanagement | High |
 
 ## Android Security
 
 | Lab | Vulnerability Class | Severity |
 |---|---|---|
-| [APK Testing](./android/apk-testing/) | Static Analysis | Medium |
+| [BUGbazaar - Static APK Testing](./android/apk-testing/) | Static Analysis | Medium |
 | [BUGbazaar — Dynamic APK Testing](./android/bugbazaar-dynamic-testing/) | Runtime Manipulation, SSL Pinning Bypass | Medium |
 
 ## Red Team & CTF
 
 | Lab | Category | Result |
 |---|---|---|
-| [Mr. Robot](./redteam/mr-robot/) | Boot-to-Root | Root obtained |
 | [Kioptrix](./redteam/kioptrix/) | Boot-to-Root | Root obtained |
 | [Password Cracking](./redteam/password-cracking/) | Credential Attacks | — |
 | [Network Sniffing](./redteam/network-sniffing/) | Traffic Analysis | — |
