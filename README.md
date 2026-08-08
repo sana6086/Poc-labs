@@ -32,11 +32,11 @@ Penetration testing &amp; VAPT lab write-ups — web application, API, Android, 
 
 | Lab | Category | Result |
 |---|---|---|
-| [Kioptrix](./redteam/kioptrix/) | Boot-to-Root | Root obtained |
-| [Password Cracking](./redteam/password-cracking/) | Credential Attacks | — |
-| [Network Sniffing](./redteam/network-sniffing/) | Traffic Analysis | — |
-| [Social Engineering](./redteam/social-engineering/) | Human-Layer Attack Simulation | — |
-| [Footprinting & Information Gathering](./redteam/footprinting-recon/) | Reconnaissance | — |
+| [Kioptrix](./Red-Team/kioptrix1/) | Boot-to-Root | Root obtained |
+| [Password Cracking](./Red-Team/Password-Cracking/) | Credential Attacks | — |
+| [Network Sniffing](./Red-Team/Sniffing/) | Traffic Analysis | — |
+| [Social Engineering/Phishing](./Red-Team/Phishing%20&%20Social-Engineering/) | Human-Layer Attack Simulation | — |
+| [Footprinting & Information Gathering](./Red-Team/Footprinting-Recon/) | Reconnaissance | — |
 
 ---
 
