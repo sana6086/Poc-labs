@@ -11,9 +11,9 @@ Penetration testing &amp; VAPT lab write-ups — web application, API, Android, 
 
 | Lab | Vulnerability Class | Severity |
 |---|---|---|
-| [Temple of Doom](./web/temple-of-doom/) | Insecure Deserialization → RCE | High |
-| [Mr. Robot](./web/Mr.%20Robot/) | CMS Misconfiguration → Privilege Escalation | High |
-| [SQLi-Database-Exfilteration](./web/SQLi-Database-Exfilteration) | SQL Injection | High |
+| [Temple of Doom](./Web-Testing/Temple-of-doom/) | Insecure Deserialization → RCE | High |
+| [Mr. Robot](./Web-Testing/Mr.Robot/) | CMS Misconfiguration → Privilege Escalation | High |
+| [SQLi-Database-Exfilteration](./Web-Testing/SQLi-Database-Exfilteration/) | SQL Injection | High |
 
 ## API Security
 
